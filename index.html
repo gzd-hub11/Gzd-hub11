@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111318">
+<title>Memórias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">MEMÓRIAS</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+  <nav id="nav">
+    <a class="active" href="index.html">Galeria</a>
+    <a href="#momentos">Momentos</a>
+    <a href="#sobre">Sobre</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <span class="eyebrow">NOSSO ÁLBUM</span>
+      <h1>Momentos que<br><em>merecem ser lembrados.</em></h1>
+      <p>Fotos, vídeos e histórias guardadas em um só lugar.</p>
+      <a class="primary" href="#galeria">Ver galeria <span>↓</span></a>
+    </div>
+  </section>
+
+  <section class="section" id="galeria">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">ARQUIVO</span>
+        <h2>Galeria</h2>
+      </div>
+      <div class="filters">
+        <button class="filter active" data-filter="todos">Tudo</button>
+        <button class="filter" data-filter="foto">Fotos</button>
+        <button class="filter" data-filter="video">Vídeos</button>
+      </div>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <!--
+        Para adicionar suas próprias mídias, copie um item abaixo.
+        Fotos: troque media="foto" e o src da imagem.
+        Vídeos: use media="video" e coloque o caminho do arquivo no src.
+      -->
+      <article class="card" data-type="foto" data-title="Um dia para lembrar" data-date="2026">
+        <img src="media/foto-01.jpg" alt="Um dia para lembrar" loading="lazy">
+        <div class="card-info"><span>2026</span><h3>Um dia para lembrar</h3></div>
+      </article>
+
+      <article class="card" data-type="foto" data-title="Com a galera" data-date="2026">
+        <img src="media/foto-02.jpg" alt="Com a galera" loading="lazy">
+        <div class="card-info"><span>2026</span><h3>Com a galera</h3></div>
+      </article>
+
+      <article class="card wide" data-type="video" data-title="Aquele momento" data-date="2026" data-src="media/video-01.mp4">
+        <div class="video-placeholder"><span>▶</span><small>VÍDEO</small></div>
+        <div class="card-info"><span>2026</span><h3>Aquele momento</h3></div>
+      </article>
+
+      <article class="card" data-type="foto" data-title="Escola" data-date="2026">
+        <img src="media/foto-03.jpg" alt="Escola" loading="lazy">
+        <div class="card-info"><span>2026</span><h3>Escola</h3></div>
+      </article>
+
+      <article class="card" data-type="foto" data-title="Rolê" data-date="2026">
+        <img src="media/foto-04.jpg" alt="Rolê" loading="lazy">
+        <div class="card-info"><span>2026</span><h3>Rolê</h3></div>
+      </article>
+
+      <article class="card wide" data-type="foto" data-title="Fim de tarde" data-date="2026">
+        <img src="media/foto-05.jpg" alt="Fim de tarde" loading="lazy">
+        <div class="card-info"><span>2026</span><h3>Fim de tarde</h3></div>
+      </article>
+    </div>
+
+    <div class="empty" id="empty">Nenhuma mídia encontrada.</div>
+  </section>
+
+  <section class="section moments" id="momentos">
+    <div class="section-head">
+      <div><span class="eyebrow">COLEÇÕES</span><h2>Momentos</h2></div>
+    </div>
+    <div class="moments-grid">
+      <button class="moment" data-filter-moment="2026">
+        <span>2026</span><strong>Nossa história continua</strong><small>Fotos e vídeos</small>
+      </button>
+      <button class="moment" data-filter-moment="escola">
+        <span>ESCOLA</span><strong>Os dias de escola</strong><small>Adicionar depois</small>
+      </button>
+      <button class="moment" data-filter-moment="rolês">
+        <span>ROLÊS</span><strong>Momentos aleatórios</strong><small>Adicionar depois</small>
+      </button>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <span class="eyebrow">SOBRE</span>
+    <h2>Feito para guardar<br>o que importa.</h2>
+    <p>Um cantinho para reunir aquelas fotos e vídeos que não deveriam ficar esquecidos na galeria do celular.</p>
+  </section>
+</main>
+
+<footer>MEMÓRIAS · NOSSO ÁLBUM</footer>
+
+<div class="viewer" id="viewer" aria-hidden="true">
+  <button class="close" id="closeViewer">×</button>
+  <button class="prev" id="prev">‹</button>
+  <div class="viewer-content" id="viewerContent"></div>
+  <button class="next" id="next">›</button>
+  <div class="viewer-caption" id="viewerCaption"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
